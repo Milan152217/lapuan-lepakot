@@ -1,0 +1,452 @@
+
+/* 1. Colours, fonts and spacing */
+
+:root {
+    color-scheme: light dark;
+
+    --background: #f3ead8;
+    --text: #2e2a24;
+    --accent: #8a5a2b;
+    --surface: #fff8ee;
+    --header: #2e2a24;
+    --header-text: #f3ead8;
+    --button-text: #ffffff;
+    --border: #8a5a2b;
+
+    --font-heading: Georgia, serif;
+    --font-text: Arial, sans-serif;
+
+    --space-small: 0.5rem;
+    --space-medium: 1rem;
+    --space-large: 2rem;
+    --radius: 8px;
+}
+
+
+/* 2. Basic page settings */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--font-text);
+    font-size: 1rem;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+/* 3. Header */
+
+header {
+    background-color: var(--header);
+    color: var(--header-text);
+    padding: var(--space-medium);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-medium);
+}
+
+header h1,
+header h2 {
+    color: var(--header-text);
+    margin: 0;
+}
+
+
+/* 4. Text-based logo */
+
+.logo {
+    display: inline-block;
+    color: var(--header-text);
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    display: block;
+    font-family: var(--font-text);
+    font-size: 0.8rem;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+
+/* 5. Navigation using Flexbox */
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-small);
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: block;
+    color: var(--header-text);
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    background-color: var(--accent);
+    color: var(--button-text);
+}
+
+
+/* 6. Main content */
+
+main {
+    width: 100%;
+    max-width: 75rem;
+    min-width: 0;
+    margin-inline: auto;
+    padding: var(--space-medium);
+}
+
+
+/* 7. Headings and paragraphs */
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--accent);
+    line-height: 1.3;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    max-width: 65ch;
+    margin-bottom: var(--space-medium);
+}
+
+
+/* 8. Content sections */
+
+section {
+    background-color: var(--surface);
+    padding: var(--space-medium);
+    margin-bottom: var(--space-large);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+
+/* 9. Hero section */
+
+.hero {
+    text-align: center;
+    padding: var(--space-large);
+}
+
+.hero p {
+    margin-inline: auto;
+}
+
+
+/* 10. Responsive cards using CSS Grid */
+
+.cards,
+.teams-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: var(--space-medium);
+}
+
+.card {
+    min-width: 0;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--space-medium);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+
+/* 11. Links */
+
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* 12. Buttons */
+
+button,
+.btn,
+.cta {
+    display: inline-block;
+    background-color: var(--accent);
+    color: var(--button-text);
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: var(--font-text);
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover,
+.btn:hover,
+.cta:hover {
+    text-decoration: underline;
+}
+
+
+/* 13. Images */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+}
+
+
+/* 14. Match and training tables */
+
+table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-block: var(--space-medium);
+}
+
+th,
+td {
+    padding: var(--space-small);
+    border: 1px solid var(--border);
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+th {
+    background-color: var(--accent);
+    color: var(--button-text);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--background);
+}
+
+caption {
+    font-weight: bold;
+    padding: var(--space-small);
+}
+
+
+/* 15. Contact and registration form */
+
+form {
+    width: 100%;
+    max-width: 40rem;
+    margin-inline: auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: var(--space-small);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 0.75rem;
+    margin-bottom: var(--space-medium);
+
+    background-color: var(--surface);
+    color: var(--text);
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font: inherit;
+}
+
+textarea {
+    min-height: 8rem;
+    resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: auto;
+}
+
+
+/* 16. Keyboard accessibility */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--text);
+    outline-offset: 4px;
+}
+
+header a:focus-visible,
+footer a:focus-visible {
+    outline-color: var(--header-text);
+}
+
+
+/* 17. Footer */
+
+footer {
+    background-color: var(--header);
+    color: var(--header-text);
+    text-align: center;
+    padding: var(--space-large);
+}
+
+footer p {
+    margin: 0.5rem auto;
+}
+
+footer a {
+    color: var(--header-text);
+}
+
+
+/* 18. Desktop responsive layout */
+
+@media (min-width: 48rem) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: var(--space-large);
+    }
+
+    .logo {
+        text-align: left;
+    }
+
+    nav ul {
+        gap: var(--space-medium);
+    }
+
+    main {
+        padding: var(--space-large);
+    }
+
+    section {
+        padding: var(--space-large);
+    }
+
+    .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-large);
+    }
+
+    th,
+    td {
+        padding: var(--space-medium);
+    }
+}
+
+
+/* 19. Automatic dark mode */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --background: #211e19;
+        --text: #f3ead8;
+        --accent: #d6a66e;
+        --surface: #302a23;
+        --header: #171410;
+        --header-text: #f3ead8;
+        --button-text: #211e19;
+        --border: #d6a66e;
+    }
+}
+
+
+/* 20. Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+@media (max-width: 480px) {
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 0.15rem;
+    }
+
+    nav a {
+        font-size: 0.75rem;
+        padding: 0.65rem 0.3rem;
+        white-space: nowrap;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+}

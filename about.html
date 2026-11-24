@@ -1,66 +1,98 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Lapuan Lepakot ry</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h2><a href="index.html">Lapuan Lepakot ry</a></h2>
-    <p>Floorball for everyone in Lapua</p>
+    <a href="index.html" class="logo">
+        Lapuan Lepakot ry
+        <span>Floorball Club · Lapua</span>
+    </a>
 
-    <nav>
+    <nav aria-label="Main navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="listing.html">Matches & Training</a></li>
-            <li><a href="contact.html">Join Us</a></li>
+            <li><a href="about.html" aria-current="page">About</a></li>
+            <li><a href="listing.html">Matches &amp; Training</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <h1>About Lapuan Lepakot</h1>
 
-    <p>
-        Lapuan Lepakot ry is a floorball club based in Lapua, Finland.
-        Our club is supported by volunteers, players and families.
-    </p>
+    <section class="hero">
+        <h1>About Lapuan Lepakot</h1>
+
+        <p>
+            Lapuan Lepakot ry is a floorball club based in Lapua, Finland.
+            Our club is supported by volunteers, players and families.
+        </p>
+    </section>
 
     <section>
         <h2>Our Teams</h2>
 
-        <h3>Junior Teams</h3>
-        <p>We help young players learn floorball and teamwork.</p>
+        <div class="teams-grid">
 
-        <h3>Men's Team</h3>
-        <p>Our men's team participates in floorball activities and competitions.</p>
+            <article class="card">
+                <h3>Junior Teams</h3>
+                <p>
+                    We help young players learn floorball and teamwork.
+                </p>
+            </article>
 
-        <h3>Women's Team</h3>
-        <p>Our women's team provides opportunities to enjoy and develop floorball skills.</p>
+            <article class="card">
+                <h3>Men's Team</h3>
+                <p>
+                    Our men's team participates in floorball
+                    activities and competitions.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Women's Team</h3>
+                <p>
+                    Our women's team provides opportunities
+                    to enjoy and develop floorball skills.
+                </p>
+            </article>
+
+        </div>
     </section>
 
-    <section>
-        <h2>Our Values</h2>
+    <div class="two-column">
 
-        <ul>
-            <li>Teamwork</li>
-            <li>Respect</li>
-            <li>Fair play</li>
-            <li>Community</li>
-            <li>Enjoyment of sports</li>
-        </ul>
-    </section>
+        <section>
+            <h2>Our Values</h2>
 
-    <section>
-        <h2>Become a Member</h2>
+            <ul>
+                <li>Teamwork</li>
+                <li>Respect</li>
+                <li>Fair play</li>
+                <li>Community</li>
+                <li>Enjoyment of sports</li>
+            </ul>
+        </section>
 
-        <p>Everyone is welcome to discover our club.</p>
+        <section>
+            <h2>Become a Member</h2>
 
-        <a href="contact.html">Contact us to join</a>
-    </section>
+            <p>Everyone is welcome to discover our club.</p>
+
+            <a href="contact.html" class="cta">
+                Contact us to join
+            </a>
+        </section>
+
+    </div>
+
 </main>
 
 <footer>

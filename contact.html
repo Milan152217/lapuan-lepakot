@@ -1,83 +1,119 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Us - Lapuan Lepakot ry</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h2><a href="index.html">Lapuan Lepakot ry</a></h2>
-    <p>Floorball for everyone in Lapua</p>
+    <a href="index.html" class="logo">
+        Lapuan Lepakot ry
+        <span>Floorball Club · Lapua</span>
+    </a>
 
-    <nav>
+    <nav aria-label="Main navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="listing.html">Matches & Training</a></li>
-            <li><a href="contact.html">Join Us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="listing.html">Matches &amp; Training</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <h1>Join Lapuan Lepakot</h1>
 
-    <p>
-        Would you like to play floorball?
-        You can register for a free trial practice.
-    </p>
-
-    <section>
-        <h2>Free Trial Practice Registration</h2>
-
-        <form action="#" method="get">
-
-            <p>
-                <label for="name">Full Name:</label><br>
-                <input type="text" id="name" name="name" required>
-            </p>
-
-            <p>
-                <label for="email">Email Address:</label><br>
-                <input type="email" id="email" name="email" required>
-            </p>
-
-            <p>
-                <label for="team">Choose Your Team:</label><br>
-
-                <select id="team" name="team" required>
-                    <option value="">Select a team</option>
-                    <option value="junior">Junior Team</option>
-                    <option value="men">Men's Team</option>
-                    <option value="women">Women's Team</option>
-                    <option value="unknown">Not Sure Yet</option>
-                </select>
-            </p>
-
-            <p>
-                <label for="message">Additional Information:</label><br>
-                <textarea id="message" name="message" rows="4"></textarea>
-            </p>
-
-            <button type="submit">Submit Registration</button>
-
-        </form>
+    <section class="hero">
+        <h1>Join Lapuan Lepakot</h1>
 
         <p>
-            This is a demonstration form and is not yet connected
-            to the club's email system.
+            Would you like to play floorball?
+            You can register for a free trial practice.
         </p>
     </section>
 
-    <section>
-        <h2>Contact Information</h2>
+    <div class="two-column">
 
-        <p>Club: Lapuan Lepakot ry</p>
-        <p>Location: Lapua, Finland</p>
-        <p>Email: To be confirmed by the club</p>
-    </section>
+        <section>
+            <h2>Free Trial Practice Registration</h2>
+
+            <p>Fields marked with * are required.</p>
+
+            <form action="#" method="post">
+
+                <div>
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name"
+                           autocomplete="name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email"
+                           autocomplete="email"
+                           placeholder="Enter your email address" required>
+                </div>
+
+                <div>
+                    <label for="team">Choose Your Team *</label>
+
+                    <select id="team" name="team" required>
+                        <option value="">Select a team</option>
+                        <option value="junior">Junior Team</option>
+                        <option value="men">Men's Team</option>
+                        <option value="women">Women's Team</option>
+                        <option value="unknown">Not Sure Yet</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message">
+                        Additional Information (Optional)
+                    </label>
+
+                    <textarea id="message" name="message"
+                              rows="4"
+                              placeholder="Write your message here"></textarea>
+                </div>
+
+                <button type="submit">Submit Registration</button>
+
+            </form>
+
+            <p>
+                This is a demonstration form and is not yet
+                connected to the club's email system.
+                Please use sample information when testing.
+            </p>
+        </section>
+
+        <section>
+            <h2>Contact Information</h2>
+
+            <p><strong>Club:</strong> Lapuan Lepakot ry</p>
+
+            <p><strong>Location:</strong> Lapua, Finland</p>
+
+            <p><strong>Email:</strong> To be confirmed by the club</p>
+
+            <h3>Free Trial Practice</h3>
+
+            <p>
+                Come and experience floorball, meet our players
+                and discover our club.
+            </p>
+
+            <a href="listing.html" class="cta">
+                View Training Times
+            </a>
+        </section>
+
+    </div>
 
 </main>
 

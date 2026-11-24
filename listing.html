@@ -1,30 +1,40 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matches and Training - Lapuan Lepakot</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h2><a href="index.html">Lapuan Lepakot ry</a></h2>
-    <p>Floorball for everyone in Lapua</p>
+    <a href="index.html" class="logo">
+        Lapuan Lepakot ry
+        <span>Floorball Club · Lapua</span>
+    </a>
 
-    <nav>
+    <nav aria-label="Main navigation">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="listing.html">Matches & Training</a></li>
-            <li><a href="contact.html">Join Us</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="listing.html" aria-current="page">Matches &amp; Training</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 </header>
 
 <main>
-    <h1>Matches and Training Schedule</h1>
 
-    <p>Find upcoming matches, previous results and training schedules.</p>
+    <section class="hero">
+        <h1>Matches and Training Schedule</h1>
+
+        <p>
+            Find upcoming matches, previous results
+            and training schedules.
+        </p>
+    </section>
 
     <section>
         <h2>Upcoming Matches</h2>
@@ -32,103 +42,132 @@
         <table>
             <caption>Upcoming match schedule - example data</caption>
 
-            <tr>
-                <th>Date</th>
-                <th>Team</th>
-                <th>Match</th>
-                <th>Time</th>
-                <th>Location</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Team</th>
+                    <th scope="col">Match</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Location</th>
+                </tr>
+            </thead>
 
-            <tr>
-                <td>14 November</td>
-                <td>Men</td>
-                <td>Lapuan Lepakot vs Example Team</td>
-                <td>15:00</td>
-                <td>Lapua Sports Hall</td>
-            </tr>
+            <tbody>
+                <tr>
+                    <td>14 November</td>
+                    <td>Men</td>
+                    <td>Lapuan Lepakot vs Example Team</td>
+                    <td>15:00</td>
+                    <td>Lapua Sports Hall</td>
+                </tr>
 
-            <tr>
-                <td>15 November</td>
-                <td>Women</td>
-                <td>Lapuan Lepakot vs Example Team</td>
-                <td>13:00</td>
-                <td>Lapua Sports Hall</td>
-            </tr>
+                <tr>
+                    <td>15 November</td>
+                    <td>Women</td>
+                    <td>Lapuan Lepakot vs Example Team</td>
+                    <td>13:00</td>
+                    <td>Lapua Sports Hall</td>
+                </tr>
 
-            <tr>
-                <td>21 November</td>
-                <td>Juniors</td>
-                <td>Lapuan Lepakot vs Example Team</td>
-                <td>11:00</td>
-                <td>Lapua Sports Hall</td>
-            </tr>
+                <tr>
+                    <td>21 November</td>
+                    <td>Juniors</td>
+                    <td>Lapuan Lepakot vs Example Team</td>
+                    <td>11:00</td>
+                    <td>Lapua Sports Hall</td>
+                </tr>
+            </tbody>
         </table>
     </section>
 
-    <section>
-        <h2>Previous Results</h2>
+    <div class="two-column">
 
-        <table>
-            <caption>Previous match results - example data</caption>
+        <section>
+            <h2>Previous Results</h2>
 
-            <tr>
-                <th>Date</th>
-                <th>Team</th>
-                <th>Result</th>
-            </tr>
+            <table>
+                <caption>Previous match results - example data</caption>
 
-            <tr>
-                <td>1 November</td>
-                <td>Men</td>
-                <td>Lapuan Lepakot 4 - 3 Example Team</td>
-            </tr>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Team</th>
+                        <th scope="col">Result</th>
+                    </tr>
+                </thead>
 
-            <tr>
-                <td>31 October</td>
-                <td>Women</td>
-                <td>Lapuan Lepakot 2 - 5 Example Team</td>
-            </tr>
-        </table>
+                <tbody>
+                    <tr>
+                        <td>1 November</td>
+                        <td>Men</td>
+                        <td>Lapuan Lepakot 4 - 3 Example Team</td>
+                    </tr>
+
+                    <tr>
+                        <td>31 October</td>
+                        <td>Women</td>
+                        <td>Lapuan Lepakot 2 - 5 Example Team</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Training Times</h2>
+
+            <table>
+                <caption>Weekly training schedule - example data</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Team</th>
+                        <th scope="col">Day</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Location</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Juniors</td>
+                        <td>Tuesday</td>
+                        <td>17:00 - 18:00</td>
+                        <td>Lapua Sports Hall</td>
+                    </tr>
+
+                    <tr>
+                        <td>Women</td>
+                        <td>Wednesday</td>
+                        <td>18:30 - 20:00</td>
+                        <td>Lapua Sports Hall</td>
+                    </tr>
+
+                    <tr>
+                        <td>Men</td>
+                        <td>Thursday</td>
+                        <td>19:00 - 20:30</td>
+                        <td>Lapua Sports Hall</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+
+    <p>
+        All schedules above are sample information
+        and must be confirmed by the club.
+    </p>
+
+    <section class="hero">
+        <h2>Interested in Playing Floorball?</h2>
+
+        <p>Come and try a free practice session with our club.</p>
+
+        <a href="contact.html" class="cta">
+            Sign Up for a Free Trial
+        </a>
     </section>
-
-    <section>
-        <h2>Training Times</h2>
-
-        <table>
-            <caption>Weekly training schedule - example data</caption>
-
-            <tr>
-                <th>Team</th>
-                <th>Day</th>
-                <th>Time</th>
-                <th>Location</th>
-            </tr>
-
-            <tr>
-                <td>Juniors</td>
-                <td>Tuesday</td>
-                <td>17:00 - 18:00</td>
-                <td>Lapua Sports Hall</td>
-            </tr>
-
-            <tr>
-                <td>Women</td>
-                <td>Wednesday</td>
-                <td>18:30 - 20:00</td>
-                <td>Lapua Sports Hall</td>
-            </tr>
-
-            <tr>
-                <td>Men</td>
-                <td>Thursday</td>
-                <td>19:00 - 20:30</td>
-                <td>Lapua Sports Hall</td>
-            </tr>
-        </table>
-    </section>
-
-    <p>All schedules above are sample information and must be confirmed by the club.</p>
 
 </main>
 
