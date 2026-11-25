@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lapuan Lepakot ry - Home</title>
+    <title>Home - Lapuan Lepakot ry</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="data:,">
 </head>
 <body>
 
@@ -23,66 +25,192 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- E3 - Quick Links Popover -->
+
+    <button type="button" popovertarget="quick-menu">
+        Quick Links
+    </button>
+
+    <div id="quick-menu" popover>
+
+        <h2>Quick Links</h2>
+
+        <ul>
+            <li>
+                <a href="listing.html#match-table">
+                    Upcoming Matches
+                </a>
+            </li>
+
+            <li>
+                <a href="listing.html#training-times">
+                    Training Times
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html#registration-form">
+                    Free Trial Registration
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact Information
+                </a>
+            </li>
+        </ul>
+
+        <button type="button"
+                popovertarget="quick-menu"
+                popovertargetaction="hide">
+            Close
+        </button>
+
+    </div>
+
 </header>
 
 <main>
 
     <section class="hero">
+
         <h1>Welcome to Lapuan Lepakot</h1>
 
         <p>
-            Lapuan Lepakot ry is a floorball club located in Lapua, Finland.
-            We welcome players of different ages and skill levels.
+            Lapuan Lepakot ry is a local floorball club in Lapua,
+            Finland. We bring together players of different ages
+            and skill levels through sport, teamwork and community.
         </p>
 
-        <a href="contact.html" class="cta">Join a Free Trial</a>
+        <a href="contact.html" class="cta">
+            Join a Free Trial
+        </a>
+
     </section>
 
-    <div class="cards">
+    <section>
 
-        <section class="card">
-            <h2>Upcoming Matches</h2>
+        <h2>Discover Our Club</h2>
 
-            <p>Example match schedule:</p>
+        <div class="cards">
 
-            <ul>
-                <li>Men's Team - 14 November, 15:00</li>
-                <li>Women's Team - 15 November, 13:00</li>
-                <li>Junior Team - 21 November, 11:00</li>
-            </ul>
+            <article class="card">
 
-            <a href="listing.html">View all matches</a>
-        </section>
+                <h3>Upcoming Matches</h3>
 
-        <section class="card">
-            <h2>Join Our Club</h2>
+                <p>
+                    Find upcoming matches, playing times
+                    and match locations for our teams.
+                </p>
 
-            <p>
-                Are you interested in playing floorball?
-                Come and try one free practice session.
-            </p>
+                <a href="listing.html#match-table">
+                    View Upcoming Matches
+                </a>
 
-            <a href="contact.html">Sign up for a free trial</a>
-        </section>
+            </article>
 
-        <section class="card">
-            <h2>Our Teams</h2>
+            <article class="card">
 
-            <p>
-                We have junior teams, a men's team
-                and a women's team.
-            </p>
+                <h3>Training Times</h3>
 
-            <a href="about.html">Learn more about us</a>
-        </section>
+                <p>
+                    Check the weekly training schedules
+                    for our junior, men's and women's teams.
+                </p>
 
-    </div>
+                <a href="listing.html#training-times">
+                    View Training Times
+                </a>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Join Our Club</h3>
+
+                <p>
+                    Interested in playing floorball?
+                    Come and experience a free trial practice.
+                </p>
+
+                <a href="contact.html#registration-form">
+                    Register for a Free Trial
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2>Our Teams</h2>
+
+        <div class="teams-grid">
+
+            <article class="card">
+
+                <h3>Junior Team</h3>
+
+                <p>
+                    A friendly environment for young players
+                    to learn floorball and develop their skills.
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Men's Team</h3>
+
+                <p>
+                    Enjoy floorball, teamwork and competition
+                    with our men's team.
+                </p>
+
+            </article>
+
+            <article class="card">
+
+                <h3>Women's Team</h3>
+
+                <p>
+                    Develop your skills, stay active and
+                    enjoy playing together.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+    <section class="hero">
+
+        <h2>Become Part of Our Community</h2>
+
+        <p>
+            Whether you are a beginner or an experienced player,
+            you are welcome to join Lapuan Lepakot.
+        </p>
+
+        <a href="about.html" class="cta">
+            Learn More About Us
+        </a>
+
+    </section>
 
 </main>
 
 <footer>
+
     <p>Lapuan Lepakot ry | Lapua, Finland</p>
+
     <p>© 2026 Lapuan Lepakot ry</p>
+
 </footer>
 
 </body>

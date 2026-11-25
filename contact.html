@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Us - Lapuan Lepakot ry</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="data:,">
 </head>
 <body>
 
@@ -43,53 +45,88 @@
 
             <p>Fields marked with * are required.</p>
 
-            <form action="#" method="post">
+            <form id="registration-form" action="#" method="post">
 
-                <div>
+                <div class="form-group">
                     <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name"
+
+                    <input type="text"
+                           id="name"
+                           name="name"
                            autocomplete="name"
-                           placeholder="Enter your full name" required>
+                           placeholder="Enter your full name"
+                           aria-describedby="name-error"
+                           required>
+
+                    <p id="name-error" class="error-message"></p>
                 </div>
 
-                <div>
+                <div class="form-group">
                     <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email"
+
+                    <input type="email"
+                           id="email"
+                           name="email"
                            autocomplete="email"
-                           placeholder="Enter your email address" required>
+                           placeholder="Enter your email address"
+                           aria-describedby="email-error"
+                           required>
+
+                    <p id="email-error" class="error-message"></p>
                 </div>
 
-                <div>
+                <div class="form-group">
                     <label for="team">Choose Your Team *</label>
 
-                    <select id="team" name="team" required>
+                    <select id="team"
+                            name="team"
+                            aria-describedby="team-error"
+                            required>
+
                         <option value="">Select a team</option>
                         <option value="junior">Junior Team</option>
                         <option value="men">Men's Team</option>
                         <option value="women">Women's Team</option>
                         <option value="unknown">Not Sure Yet</option>
+
                     </select>
+
+                    <p id="team-error" class="error-message"></p>
                 </div>
 
-                <div>
+                <div class="form-group">
                     <label for="message">
                         Additional Information (Optional)
                     </label>
 
-                    <textarea id="message" name="message"
+                    <textarea id="message"
+                              name="message"
                               rows="4"
-                              placeholder="Write your message here"></textarea>
+                              maxlength="500"
+                              placeholder="Write your message here"
+                              aria-describedby="message-help"></textarea>
+
+                    <p id="message-help">
+                        Maximum 500 characters.
+                    </p>
                 </div>
 
-                <button type="submit">Submit Registration</button>
+                <button type="submit" id="submit-registration" disabled>
+                    Check Registration
+                </button>
+
+                <p id="form-status" role="status"></p>
+
+                <noscript>
+                    <p>JavaScript is required to check your registration.</p>
+                </noscript>
 
             </form>
 
             <p>
-                This is a demonstration form and is not yet
-                connected to the club's email system.
                 Please use sample information when testing.
             </p>
+
         </section>
 
         <section>

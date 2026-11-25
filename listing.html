@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matches and Training - Lapuan Lepakot</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="data:,">
 </head>
 <body>
 
@@ -39,7 +41,31 @@
     <section>
         <h2>Upcoming Matches</h2>
 
-        <table>
+        <div class="filter-buttons" role="group" aria-label="Filter matches by team">
+
+            <button type="button" data-filter="all" aria-pressed="true">
+                All Teams
+            </button>
+
+            <button type="button" data-filter="men" aria-pressed="false">
+                Men
+            </button>
+
+            <button type="button" data-filter="women" aria-pressed="false">
+                Women
+            </button>
+
+            <button type="button" data-filter="juniors" aria-pressed="false">
+                Juniors
+            </button>
+
+        </div>
+
+        <p id="match-status" role="status">
+            Showing 3 of 3 matches
+        </p>
+
+        <table id="match-table">
             <caption>Upcoming match schedule - example data</caption>
 
             <thead>
@@ -53,7 +79,7 @@
             </thead>
 
             <tbody>
-                <tr>
+                <tr data-team="men">
                     <td>14 November</td>
                     <td>Men</td>
                     <td>Lapuan Lepakot vs Example Team</td>
@@ -61,7 +87,7 @@
                     <td>Lapua Sports Hall</td>
                 </tr>
 
-                <tr>
+                <tr data-team="women">
                     <td>15 November</td>
                     <td>Women</td>
                     <td>Lapuan Lepakot vs Example Team</td>
@@ -69,7 +95,7 @@
                     <td>Lapua Sports Hall</td>
                 </tr>
 
-                <tr>
+                <tr data-team="juniors">
                     <td>21 November</td>
                     <td>Juniors</td>
                     <td>Lapuan Lepakot vs Example Team</td>
@@ -111,9 +137,8 @@
                 </tbody>
             </table>
         </section>
-
-        <section>
-            <h2>Training Times</h2>
+            <section id="training-times">
+             <h2>Training Times</h2>
 
             <table>
                 <caption>Weekly training schedule - example data</caption>

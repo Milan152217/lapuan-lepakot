@@ -69,3 +69,23 @@ During E2, I learned more about CSS variables,
 Flexbox, Grid, media queries and dark mode.
 I also learned how to use browser developer tools
 to check the website on different screen sizes.
+
+## E3 – AI Usage Log
+
+
+### How I used AI
+
+- Asked for guidance on implementing JavaScript filtering.
+- Asked for code examples for form validation and localStorage.
+- Received help understanding event listeners and DOM manipulation.
+- Asked for suggestions on implementing a popover menu.
+- Received assistance with debugging JavaScript and CSS issues.
+- Asked for guidance on testing website functionality and accessibility.
+
+### My contribution
+
+I integrated the suggested code into my existing website, made changes in VS Code and tested the functionality using Live Server and browser developer tools.
+
+### What I learned
+
+I learned how JavaScript connects with HTML, how to filter content, validate forms, store browser preferences and implement interactive website features.
